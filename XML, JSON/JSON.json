@@ -1,0 +1,61 @@
+{
+	"data": {
+		"workers": [{
+			"id": "1",
+			"name": "Petrov Petro",
+			"city": "Petropavlivka",
+			"adress": [{
+				"street": "Petrivska",
+				"house": "1",
+				"flat": "1"
+			}],
+			"contacts": [{
+				"phone": "111111111",
+				"email": "PetrovPetro@gmail.com",
+				"skype": "@PetrovPetro"
+			}]
+		}, {
+			"id": "2",
+			"name": "Oleksandrov Oleksandr",
+			"city": "Oleksandrovka",
+			"adress": [{
+				"street": "Oleksandrivska",
+				"house": "2",
+				"flat": "2"
+			}],
+			"contacts": [{
+				"phone": "222222222",
+				"email": "OleksandrovOleksandr@gmail.com",
+				"skype": "@OleksandrovOleksandr"
+			}]
+		}, {
+			"id": "3",
+			"name": "Ivanov Ivan",
+			"city": "Ivanovka",
+			"adress": [{
+				"street": "Ivanivska",
+				"house": "3",
+				"flat": "3"
+			}],
+			"contacts": [{
+				"phone": "333333333",
+				"email": "IvanovIvan@gmail.com",
+				"skype": "@IvanovIvan"
+			}]
+		}, {
+			"id": "4",
+			"name": "Mykolayenko Mykola",
+			"city": "Mykolayivka",
+			"adress": [{
+				"street": "Mykolayivska",
+				"house": "4",
+				"flat": "4"
+			}],
+			"contacts": [{
+				"phone": "444444444",
+				"email": "MykolayenkoMykola.com",
+				"skype": "@MykolayenkoMykola"
+			}]
+		}]
+	}
+}

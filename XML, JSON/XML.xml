@@ -1,0 +1,62 @@
+<data>
+	<worker>
+		<id>1</id>
+		<name>Petrov Petro</name>
+		<city>Petropavlivka</city>
+		<adress>
+			<street>Petrivska</street>
+			<house>1</house>
+			<flat>1</flat>
+		</adress>
+		<contacts>
+			<phone>111111111</phone>
+			<email>PetrovPetro@gmail.com</email>
+			<skype>@PetrovPetro</skype>
+		</contacts>
+	</worker>
+	<worker>
+		<id>2</id>
+		<name>Oleksandrov Oleksandr</name>
+		<city>Oleksandrovka</city>
+		<adress>
+			<street>Oleksandrivska</street>
+			<house>2</house>
+			<flat>2</flat>
+		</adress>
+		<contacts>
+			<phone>222222222</phone>
+			<email>OleksandrovOleksandr@gmail.com</email>
+			<skype>@OleksandrovOleksandr</skype>
+		</contacts>
+	</worker>
+	<worker>
+		<id>3</id>
+		<name>Ivanov Ivan</name>
+		<city>Ivanovka</city>
+		<adress>
+			<street>Ivanivska</street>
+			<house>3</house>
+			<flat>3</flat>
+		</adress>
+		<contacts>
+			<phone>333333333</phone>
+			<email>IvanovIvan@gmail.com</email>
+			<skype>@IvanovIvan</skype>
+		</contacts>
+	</worker>
+	<worker>
+		<id>4</id>
+		<name>Mykolayenko Mykola</name>
+		<city>Mykolayivka</city>
+		<adress>
+			<street>Mykolayivska</street>
+			<house>4</house>
+			<flat>4</flat>
+		</adress>
+		<contacts>
+			<phone>444444444</phone>
+			<email>MykolayenkoMykola.com</email>
+			<skype>@MykolayenkoMykola</skype>
+		</contacts>
+	</worker>
+</data>
