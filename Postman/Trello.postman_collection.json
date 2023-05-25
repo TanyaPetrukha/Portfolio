@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "d08f9197-25d7-4536-83d6-0f9b28319374",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25244668",
+		"_collection_link": "https://galactic-moon-691016.postman.co/workspace/GoIT-Petrukha~6cb912f8-b65f-4aea-be02-90c9c816db8e/collection/25244668-d08f9197-25d7-4536-83d6-0f9b28319374?action=share&creator=25244668&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get full list",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Board by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63bc22352ea9450030cf57b3?key={{yourKey}}&token={{yourToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63bc22352ea9450030cf57b3"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=Nazar&key={{yourKey}}&token={{yourToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nazar"
+						},
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new list 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that 'name' object is 'string'\",function (){\r",
+							"    var jsonData=pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=newlist1&idBoard=63bc22352ea9450030cf57b3&key={{yourKey}}&token={{yourToken}}&pos=bottom",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "newlist1"
+						},
+						{
+							"key": "idBoard",
+							"value": "63bc22352ea9450030cf57b3"
+						},
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						},
+						{
+							"key": "pos",
+							"value": "bottom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new list 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that 'name' object is 'string'\",function (){\r",
+							"    var jsonData=pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.be.a(\"string\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=newlist2&idBoard=63bc22352ea9450030cf57b3&key={{yourKey}}&token={{yourToken}}&pos=top",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "newlist2"
+						},
+						{
+							"key": "idBoard",
+							"value": "63bc22352ea9450030cf57b3"
+						},
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						},
+						{
+							"key": "pos",
+							"value": "top"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that 'id' object is 'string'\",function (){\r",
+							"    var jsonData=pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.be.a(\"string\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=63bc513487f18a04017c5840&key={{yourKey}}&token={{yourToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "63bc513487f18a04017c5840"
+						},
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update board",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63bc22352ea9450030cf57b3?key={{yourKey}}&token={{yourToken}}&name=Task 4&desc=The board was updated",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63bc22352ea9450030cf57b3"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{yourKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{yourToken}}"
+						},
+						{
+							"key": "name",
+							"value": "Task 4"
+						},
+						{
+							"key": "desc",
+							"value": "The board was updated"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
